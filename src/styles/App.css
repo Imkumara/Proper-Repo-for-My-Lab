@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #1f2933;
+  color-scheme: light;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.app h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #1e1b4b;
+  letter-spacing: -0.5px;
+}
+
+/* --- Add Project form --- */
+.add-project-form {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.add-project-form h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.add-project-form label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #52606d;
+}
+
+.add-project-form input,
+.add-project-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #d9dde3;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: white;
+  color: #1f2933;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.add-project-form input:focus,
+.add-project-form textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.add-project-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-project-form button {
+  margin-top: 16px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.add-project-form button:hover {
+  opacity: 0.9;
+}
+
+.add-project-form button:active {
+  transform: scale(0.97);
+}
+
+/* --- Search + list container --- */
+.project-list {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #d9dde3;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: white;
+  color: #1f2933;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* --- Grid of project cards --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid #e5e8ec;
+  border-radius: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #eef2ff, #ecfeff);
+  border-radius: 8px;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.project-info p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #6b7280;
+}
+
+/* --- Responsive breakpoints --- */
+@media (max-width: 600px) {
+  .app h1 {
+    font-size: 1.6rem;
+  }
+
+  .add-project-form,
+  .project-list {
+    padding: 16px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
